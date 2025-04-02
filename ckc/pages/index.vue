@@ -2,13 +2,13 @@
   <UApp>
     <!-- Section: Header and Step Icons -->
     <div class="flex flex-col items-center gap-4 p-4">
-      <div class="flex flex-wrap justify-center gap-4">
+      <div class="flex flex-wrap justify-center gap-4 ">
         <headtext title="ปีงบประมาณ 2567" icon="i-heroicons-calendar" />
         <headtext title="ด้านการดำรงชีพ" icon="i-heroicons-paper-airplane" />
         <headtext title="จังหวัดเลย" icon="i-mdi-database" />
       </div>
 
-      <div class="flex flex-wrap justify-center gap-4">
+      <div class="flex flex-wrap justify-center gap-4 ">
         <div
           v-for="item in items"
           :key="item.id"
@@ -73,7 +73,7 @@
       </UCard>
 
       <!-- Card: Pay Info -->
-      <UCard class="md:max-w-2xl lg:max-w-310 xl:w-310">
+      <UCard class="md:max-w-2xl lg:max-w-310 xl:w-200">
         <div class="space-y-2">
           <headtext title="ค่าใช้จ่าย" icon="i-mdi-cash-multiple" />
           <div v-for="pay in pays" :key="pay.id">
@@ -88,7 +88,8 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
+
 import { ref } from "vue";
 
 const activeId = ref(null);
@@ -149,7 +150,9 @@ const allpay = {
   title: `จำนวนเงินทั้งหมด\"ตามที่ขอ\"`,
   description: "11,067,538.20 บาท",
 };
+
 </script>
 
 <style scoped>
+
 </style>

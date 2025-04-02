@@ -17,6 +17,8 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.322",
+    "sass": "^1.86.1",
+    "sass-embedded": "^1.86.1",
     "unplugin-icons": "^22.1.0"
   }
 }
