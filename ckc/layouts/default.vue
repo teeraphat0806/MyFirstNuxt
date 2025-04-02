@@ -20,7 +20,7 @@
       <nav class="flex flex-col space-y-2 mt-5">
         <div v-for="data in datas" :key="data.id">
           <NuxtLink
-            to="/about"
+            to="/documents"
             class="hover:bg-gray-700 px-3 py-2 rounded flex text-xl"
           >
             <UButton
