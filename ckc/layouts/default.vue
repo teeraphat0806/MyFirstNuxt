@@ -20,7 +20,7 @@
       <nav class="flex flex-col space-y-2 mt-5">
         <div v-for="data in datas" :key="data.id">
           <NuxtLink
-            to="/"
+            to="/about"
             class="hover:bg-gray-700 px-3 py-2 rounded flex text-xl"
           >
             <UButton
@@ -32,6 +32,7 @@
                 icon: { base: 'w-10 h-10' }, // 👈 ปรับขนาด icon ตรงนี้เลย!
               }"
             />
+
             <p
               class="overflow-hidden max-w-0 opacity-0 group-hover:max-w-full group-hover:opacity-100 transition-all duration-300 ease-in-out whitespace-nowrap"
             >
@@ -43,9 +44,21 @@
     </aside>
 
     <!-- Main Content -->
-    <div class="grid-col">
+    <div class="w-full grid-col">
       <div class="bg-green-400 p-3 flex justify-between">
-        <div class="text-xl text-white font-bold">{{ pageTitle }}</div>
+        <div class="text-xl text-white font-bold flex">
+          <UButton
+            v-if="pageTitle != 'หน้าหลัก'"
+            icon="i-lucide-chevron-left"
+            class="text-white"
+            color="white"
+            variant="ghost"
+            @click="goBack"
+          />
+          <div class="mt-1 ml-5">
+          {{ pageTitle }}
+          </div>
+        </div>
         <div class="flex justify-end">
           <UButton
             icon="i-mdi-bell"
@@ -65,7 +78,7 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { computed, watchEffect } from "vue";
 
 const datas = [
@@ -78,12 +91,21 @@ const datas = [
   { icon: "i-mdi-cog-outline", title: "การตั้งค่า", id: 7 },
 ];
 const route = useRoute();
+const router = useRouter(); // Use useRouter for navigation
 const pageTitle = computed(() => route.meta.title || "");
 
 // Watch for route changes to debug if needed
 watchEffect(() => {
   console.log("Current route meta:", route.meta);
 });
+
+function goBack() {
+  if (window.history.length > 1) {
+    router.back(); // Use router.back() for navigation
+  } else {
+    router.push("/"); // Use router.push() for fallback navigation
+  }
+}
 </script>
 
 <style lang="scss" scoped>
