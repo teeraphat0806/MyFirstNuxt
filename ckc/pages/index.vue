@@ -150,7 +150,9 @@ const allpay = {
   title: `จำนวนเงินทั้งหมด\"ตามที่ขอ\"`,
   description: "11,067,538.20 บาท",
 };
-
+definePageMeta({
+  title: 'หน้าหลัก'
+});
 </script>
 
 <style scoped>
