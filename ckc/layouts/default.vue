@@ -20,7 +20,7 @@
       <nav class="flex flex-col space-y-2 mt-5">
         <div v-for="data in datas" :key="data.id">
           <NuxtLink
-            to="/documents"
+            :to="data.nav"
             class="hover:bg-gray-700 px-3 py-2 rounded flex text-xl"
           >
             <UButton
@@ -83,13 +83,13 @@ import { useRoute, useRouter } from "vue-router";
 import { computed, watchEffect } from "vue";
 
 const datas = [
-  { icon: "i-mdi-plus-box-outline", title: "สร้างรายการ", id: 1 },
-  { icon: "i-mdi-folder-outline", title: "รายการทั้งหมด", id: 2 },
-  { icon: "i-mdi-pencil-outline", title: "จัดการชุดเอกสาร", id: 3 },
-  { icon: "i-mdi-view-dashboard-outline", title: "ข้อมูลสถิติ", id: 4 },
-  { icon: "i-mdi-file-document-outline", title: "รายงาน", id: 5 },
-  { icon: "i-mdi-book-open-outline", title: "คู่มือการใช้งาน", id: 6 },
-  { icon: "i-mdi-cog-outline", title: "การตั้งค่า", id: 7 },
+  { icon: "i-mdi-plus-box-outline", title: "สร้างรายการ",nav:"/documents" ,id: 1 },
+  { icon: "i-mdi-folder-outline", title: "รายการทั้งหมด",nav:"/documents", id: 2 },
+  { icon: "i-mdi-pencil-outline", title: "จัดการชุดเอกสาร",nav:"/documents", id: 3 },
+  { icon: "i-mdi-view-dashboard-outline", title: "ข้อมูลสถิติ",nav:"/documents", id: 4 },
+  { icon: "i-mdi-file-document-outline", title: "รายงาน",nav:"/documents", id: 5 },
+  { icon: "i-mdi-book-open-outline", title: "คู่มือการใช้งาน",nav:"/documents", id: 6 },
+  { icon: "i-mdi-cog-outline", title: "การตั้งค่า",nav:"/documents", id: 7 },
 ];
 const route = useRoute();
 const router = useRouter(); // Use useRouter for navigation
