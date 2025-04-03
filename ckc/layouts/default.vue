@@ -24,6 +24,7 @@
             class="hover:bg-gray-700 px-3 py-2 rounded flex text-xl"
           >
             <UButton
+            :v-if="data.title !== 'หน้าหลัก'"
               class="text-white mr-5"
               :icon="`${data.icon}`"
               color="white"

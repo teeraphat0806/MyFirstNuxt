@@ -151,7 +151,7 @@ const allpay = {
   description: "11,067,538.20 บาท",
 };
 definePageMeta({
-  title: 'Home'
+  title: 'หน้าหลัก'
 });
 </script>
 
