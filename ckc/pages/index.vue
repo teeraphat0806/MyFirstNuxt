@@ -9,16 +9,15 @@
       </div>
 
       <div class="flex flex-wrap justify-center gap-4 ">
-     
         <div
           v-for="item in items"
           :key="item.id"
-          class="flex w-20"
-        ><div class="flex flex-col items-center gap-2 ">
+          class="flex flex-col items-center gap-2 w-20"
+        >
           <UButton
             :class="[
               'w-12 h-12 rounded-full flex items-center justify-center',
-              activeId >= item.id
+              activeId === item.id
                 ? 'bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white'
                 : 'bg-gray-200 text-gray-500',
             ]"
@@ -26,14 +25,9 @@
             variant="solid"
             @click="activeId = item.id"
           />
-
           <p class="text-xs text-center text-green-500">{{ item.title }}</p>
         </div>
-        <div v-if="item.id != items.length" :class="activeId > item.id ? 'h-1 w-full bg-gradient-to-r from-green-800 via-green-600 to-green-400 mt-5 pr-12' : 'h-1 w-full mt-5 pr-12  ghost '"/>
-         <div v-if="item.id == items.length" class="h-1 w-full ghost pr-12"/>
-        </div>
       </div>
-        
     </div>
 
     <!-- Section: Cards Layout -->
@@ -157,7 +151,7 @@ const allpay = {
   description: "11,067,538.20 บาท",
 };
 definePageMeta({
-  title: 'หน้าหลัก'
+  title: 'Home'
 });
 </script>
 
