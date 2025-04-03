@@ -2,8 +2,8 @@
   <UApp class="w-full">
     <!-- Section: Header and Step Icons -->
     <div class="flex flex-col items-center gap-4 ">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 ">
-        <UCard class="md:w-full lg:w-100">
+      <div class="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4 p-4 ">
+        <UCard class="w-full sm:w-4/5 md:max-w-2xl lg:w-65 xl:w-100">
           <div class="space-y-2 ">
             <headtext
               title="เอกสารร่าง 1 "
@@ -16,7 +16,7 @@
             </div>
           </div>
         </UCard>
-        <UCard class="w-full lg:w-100">
+        <UCard class="w-full sm:w-4/5 md:max-w-2xl lg:w-65 xl:w-100">
           <div class="space-y-2">
             <headtext
               title="เอกสารร่าง 2 "
@@ -28,7 +28,7 @@
             </div>
           </div>
         </UCard>
-        <UCard class="md:w-full lg:w-100">
+        <UCard class="w-full sm:w-4/5 md:w-xs lg:w-65 xl:w-100">
           <div class="space-y-2">
            
               <headtext
@@ -42,7 +42,7 @@
             </div>
           </div>
         </UCard>
-        <UCard class="md:w-full lg:w-100">
+        <UCard class="w-full sm:w-4/5 md:w-xs lg:w-65 xl:w-100">
           <div class="space-y-2">
             <headtext
               title="เอกสารร่าง 4 "
