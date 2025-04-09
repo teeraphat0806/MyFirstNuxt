@@ -1,2 +1,31 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+@theme {
+    --font-sans: 'Sarabun', sans-serif;
+    --ui-header-height: 70px;
+    --ui-primary: #40B59F;
+    --shadow-sidebar: 0 0 15px 0 rgba(0, 0, 0, 0.15); 
+    --ui-bg: #FFFEF6;
+    --ui-secondary: #43A1F9;
+    --ui-error: #FF8282;
+    /* --ui-text-muted: var(--color-old-neutral-300);*/
+  }
+  
+  /*
+    The default border color has changed to `currentColor` in Tailwind CSS v4,
+    so we've added these compatibility styles to make sure everything still
+    looks the same as it did with Tailwind CSS v3.
+  
+    If we ever want to remove these styles, we need to add an explicit border
+    color utility to any element that depends on these defaults.
+  */
+  @layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+      border-color: var(--color-gray-200, currentColor);
+    }
+  }

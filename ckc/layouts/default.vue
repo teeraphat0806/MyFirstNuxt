@@ -3,7 +3,7 @@
     <Sidebar />
     <div class="w-full grid-col">
       <Header />
-      <main class="flex-1 p-6 md:ml-15 bg-gray-100 overflow-auto">
+      <main class=" flex-1 p-6 md:ml-15 bg-white overflow-auto z-0 relative ">
         <slot />
       </main>
     </div>

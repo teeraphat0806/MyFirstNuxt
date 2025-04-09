@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="group hidden md:block md:absolute top-0 left-0 h-full w-18 hover:w-68 transition-all duration-400 ease-in-out bg-gradient-to-b from-[#40B59F] to-[#F5CC3B] text-white p-2 z-10"
+    class="group hidden md:block md:absolute top-0 left-0 h-full w-18 hover:w-68 transition-all duration-400 ease-in-out bg-gradient-to-b from-[#40B59F] to-[#F5CC3B] text-white p-2 z-10 "
   >
     <div class="flex p-1">
       <div
